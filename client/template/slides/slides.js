@@ -5,6 +5,8 @@ $.getScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"
         $.getScript("//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js", function(){
             $.getScript("//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js", function(){
 
+                //*********************************** Animation des slides *************************************
+
                 var controller = new ScrollMagic.Controller();
 
                 //Slide 7 animation
@@ -88,6 +90,11 @@ $.getScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"
                 })
                     .setTween(timelineSlide9) // trigger a TweenMax.to tween
                     .addTo(controller);
+
+                //*********************************** Gestion du bouton de navigation *************************************
+
+
+
 
             });
         });
