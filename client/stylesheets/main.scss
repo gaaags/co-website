@@ -87,6 +87,11 @@ p {
 .description {
   padding-top: 150px;
   padding-left: 50px;
+
+  p {
+    width:80%;
+  }
+
 }
 
 
@@ -265,10 +270,10 @@ p {
     .transparent-container-member {
       border:5px double $light-black;
       padding:15px;
-      width: 400px;
+      width: 40%;
       position: relative;
       top:20%;
-      left:60%;
+      left:50%;
       p {
         text-align: justify;
       }
@@ -283,7 +288,7 @@ p {
       padding:15px;
       width: 300px;
       position: relative;
-      top:50%;
+      top:45%;
       left:75%;
 
       img {
@@ -298,6 +303,7 @@ p {
         top:-40px;
         margin:0;
         text-align: justify;
+        line-height: $font-size*1.1;
       }
     }
   }
