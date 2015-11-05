@@ -1,0 +1,74 @@
+@import "{wolves:bourbon}/bourbon";
+@import "{wolves:neat}/neat";
+
+.container{
+  @include outer-container(102%);
+  $visual-grid: true;
+  #slide4 {
+    @include row();
+
+    section {
+      @include span-columns(8);
+      //@include pad();
+    }
+    .cocoriKro {
+      @include span-columns(4);
+      //@include reset-display;
+      //@include pad();
+    }
+  }
+
+  #slide5 {
+
+    > div:first-child {
+      @include span-columns(9);
+
+      .description {
+        @include span-columns(9 of 9);
+      }
+
+      .elements {
+        @include span-columns(9);
+
+        .bottles {
+          @include span-columns(5 of 9);
+          .legend {
+            @include span-columns(5 of 5);
+          }
+        }
+
+        .echantillons {
+          @include span-columns(2 of 9);
+        }
+
+        .verres {
+          @include span-columns(2 of 9);
+        }
+      }
+    }
+    .guide {
+      @include span-columns(3);
+    }
+  }
+
+  #slide7 {
+    .description {
+      @include row();
+    }
+    .illustrations {
+      @include row();
+    }
+  }
+
+  #slide9{
+    .angel-section {
+      @include span-columns(5);
+    }
+    .CTA-buy {
+      @include span-columns(2);
+    }
+    .devil-section {
+      @include span-columns(5);
+    }
+  }
+}
