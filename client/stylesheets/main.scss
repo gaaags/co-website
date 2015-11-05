@@ -257,8 +257,71 @@ p {
 }
 
 #slide6 {
-  background-image: url("slide6-team.png");
-  background-size: cover;
+
+  .team-member {
+    background-size: cover;
+    height: 100%;
+
+    .transparent-container-member {
+      border:5px double $light-black;
+      padding:15px;
+      width: 400px;
+      position: relative;
+      top:20%;
+      left:60%;
+      p {
+        text-align: justify;
+      }
+    }
+  }
+
+  #whole-team {
+    background-image: url("slide6/whole-team.png");
+
+    .transparent-container-team {
+      vertical-align: top;
+      padding:15px;
+      width: 300px;
+      position: relative;
+      top:50%;
+      left:75%;
+
+      img {
+        width:100px;
+        position: relative;
+        top: -52px;
+        left: -52px;
+        margin: 0;
+      }
+      p {
+        position: relation;
+        top:-40px;
+        margin:0;
+        text-align: justify;
+      }
+    }
+  }
+
+  #christian-team {
+    background-image: url("slide6/christian-team.png");
+  }
+
+  #mael-team {
+    background-image: url("slide6/mael-team.png");
+  }
+
+  #gaetan-team {
+    background-image: url("slide6/gaetan-team.png");
+  }
+
+  #benjamin-team {
+    background-image: url("slide6/benjamin-team.png");
+  }
+
+  #thomas-team {
+    background-image: url("slide6/thomas-team.png");
+  }
+
   .team-names {
     h3 {
       display:inline-block;
