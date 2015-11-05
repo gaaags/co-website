@@ -99,6 +99,8 @@ p {
 
 #slide1 {
   text-align: center;
+  background-image: url('co-main-background.png');
+  background-size: cover;
 
   .vertical-align-bloc {
     margin-top: 15%;
@@ -363,6 +365,7 @@ p {
 }
 
 #slide9 {
+  
   > div {
     position: relative;
     top: 20%;
@@ -413,4 +416,24 @@ p {
   display:inline-block;
   line-height:normal;
   text-align:center;
+}
+
+//****************************************** BLOG ****************************************
+
+#blog {
+
+  background-image: url('co-main-background.png');
+  background-size: cover;
+  height:100%;
+
+  h1 {
+    display:block;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top:50%;
+    width: 100%;
+    text-align: center;
+    background-color: $white-transparent;
+  }
 }
