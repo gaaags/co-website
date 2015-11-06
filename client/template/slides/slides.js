@@ -93,7 +93,7 @@ $.getScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"
 
                 //*********************************** Gestion du bouton de navigation *************************************
 
-
+                //
 
 
             });
