@@ -5,6 +5,8 @@ $.getScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"
         $.getScript("//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js", function(){
             $.getScript("//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js", function(){
 
+                //*********************************** Animation des slides *************************************
+
                 var controller = new ScrollMagic.Controller();
 
                 //Slide 7 animation
@@ -88,6 +90,59 @@ $.getScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"
                 })
                     .setTween(timelineSlide9) // trigger a TweenMax.to tween
                     .addTo(controller);
+
+                //*********************************** Gestion du bouton de navigation *************************************
+
+                $('#slide7').waypoint({
+                  handler:function(direction){
+                    if(direction === 'down'){
+                      $('.main-nav-button.fixed').css('display','block');
+                      $('.main-nav-button.fixed a').attr('href','/#slide4');
+                      TweenMax.to('.main-nav-button.fixed',1.3,{opacity:0.8});
+                    } else {
+                      TweenMax.to('.main-nav-button.fixed',1.3,{opacity:0});
+                    }
+                  }
+                });
+
+                $('#slide4').waypoint({
+                  handler:function(direction){
+                    if(direction === 'down'){
+                      $('.main-nav-button.fixed a').attr('href','/#slide8');
+                    } else {
+                      $('.main-nav-button.fixed a').attr('href','/#slide4');
+                    }
+                  }
+                });
+
+                $('#slide8').waypoint({
+                  handler:function(direction){
+                    if(direction === 'down'){
+                      $('.main-nav-button.fixed a').attr('href','/#slide5');
+                    } else {
+                      $('.main-nav-button.fixed a').attr('href','/#slide8');
+                    }
+                  }
+                });
+
+                $('#slide5').waypoint({
+                  handler:function(direction){
+                    if(direction === 'down'){
+                      $('.main-nav-button.fixed a').attr('href','/#slide9');
+                    } else {
+                      $('.main-nav-button.fixed a').attr('href','/#slide5');
+                    }
+                  }
+                });
+
+                $('#slide5').waypoint({
+                  handler:function(direction){
+                    if(direction === 'up'){
+                      $('.main-nav-button.fixed a').attr('href','/#slide9');
+                    }
+                  }
+                });
+
 
             });
         });

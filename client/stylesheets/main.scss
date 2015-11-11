@@ -17,6 +17,8 @@ $font-size:1.2em;
 $orange-fonce: #FC8712;
 $dark-green: #488452;
 $jaune-clair:#EEEB25;
+$light-black:#1A1212;
+$white-transparent:transparentize(white,0.3);
 
 //****************************************** GENERAL ***************************************
 
@@ -24,7 +26,7 @@ body, html, .container, #main {
   height: 100%;
   margin:0px;
   font-family: 'Myriad Pro Regular', Tahoma, sans-serif;
-  color: #1A1212;
+  color: $light-black;
 }
 
 body {
@@ -34,7 +36,11 @@ body {
 //------ Containers --------
 
 .transparent-container{
-  background-color: rgba(250,250,250,0.3);
+  background-color: $white-transparent;
+}
+
+.main-container {
+  padding-top: 110px;
 }
 
 //-------------Titres et Textes-----------------
@@ -83,34 +89,57 @@ p {
 }
 
 .description {
-  padding-top: 150px;
+  padding-top: 10%;
   padding-left: 50px;
+
+  p {
+    width:80%;
+  }
 }
 
+.main-nav-button {
+  font-size: 3*$font-size;
+  width:60px;
+  height:60px;
+  background-color: $orange-fonce;
+  border-radius: 50px;
+
+  i {
+    color:#fff;
+  }
+}
+
+.main-nav-button.fixed {
+  //display: none;
+  position: fixed;
+  right:20px;
+  bottom:20px;
+  opacity: 0;
+
+  i {
+    position: relative;
+    top: -0.15em;
+  }
+}
+
+.main-nav-button.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 //************************************** INDIVIDUAL SLIDES ***********************************
 
 #slide1 {
   text-align: center;
+  background-image: url('co-main-background.png');
+  background-size: cover;
 
   .vertical-align-bloc {
-    margin-top: 10%;
-    width:40%;
-
-    div {
-      font-size: 3*$font-size;
-      width:60px;
-      height:60px;
-      background-color: $orange-fonce;
-      border-radius: 50px;
-      margin-left: auto;
-      margin-right: auto;
-
-      i {
-        color:#fff;
-      }
-
-    }
+    margin-top: 15%;
+    width:70%;
+    border: 7px double $light-black;
+    padding: 20px;
+    background-color: $white-transparent;
   }
 }
 
@@ -239,7 +268,7 @@ p {
     .text-legend {
       display:inline-block;
     }
-    
+
     h4 {
       margin-bottom: 0px;
       font-weight: 800;
@@ -252,8 +281,72 @@ p {
 }
 
 #slide6 {
-  background-image: url("slide6-team.png");
-  background-size: cover;
+
+  .team-member {
+    background-size: cover;
+    height: 100%;
+
+    .transparent-container-member {
+      border:5px double $light-black;
+      padding:15px;
+      width: 40%;
+      position: relative;
+      top:20%;
+      left:50%;
+      p {
+        text-align: justify;
+      }
+    }
+  }
+
+  #whole-team {
+    background-image: url("slide6/whole-team.png");
+
+    .transparent-container-team {
+      vertical-align: top;
+      padding:15px;
+      width: 300px;
+      position: relative;
+      top:45%;
+      left:75%;
+
+      img {
+        width:100px;
+        position: relative;
+        top: -52px;
+        left: -52px;
+        margin: 0;
+      }
+      p {
+        position: relation;
+        top:-40px;
+        margin:0;
+        text-align: justify;
+        line-height: $font-size*1.1;
+      }
+    }
+  }
+
+  #christian-team {
+    background-image: url("slide6/christian-team.png");
+  }
+
+  #mael-team {
+    background-image: url("slide6/mael-team.png");
+  }
+
+  #gaetan-team {
+    background-image: url("slide6/gaetan-team.png");
+  }
+
+  #benjamin-team {
+    background-image: url("slide6/benjamin-team.png");
+  }
+
+  #thomas-team {
+    background-image: url("slide6/thomas-team.png");
+  }
+
   .team-names {
     h3 {
       display:inline-block;
@@ -283,12 +376,13 @@ p {
   .elements {
     right: 0;
     img {
-      width:170px;
+      width:10em;
     }
   }
 }
 
 #slide9 {
+
   > div {
     position: relative;
     top: 20%;
@@ -339,4 +433,24 @@ p {
   display:inline-block;
   line-height:normal;
   text-align:center;
+}
+
+//****************************************** BLOG ****************************************
+
+#blog {
+
+  background-image: url('co-main-background.png');
+  background-size: cover;
+  height:100%;
+
+  h1 {
+    display:block;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top:50%;
+    width: 100%;
+    text-align: center;
+    background-color: $white-transparent;
+  }
 }
