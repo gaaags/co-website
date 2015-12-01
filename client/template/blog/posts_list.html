@@ -1,0 +1,12 @@
+<template name="postsList">
+    <div class="padding-container">
+        <div class="posts-list blog">
+            <h1>Le blog des Chercheurs</h1>
+            <div class="posts">
+                {{#each posts}}
+                    {{> postItem}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</template>

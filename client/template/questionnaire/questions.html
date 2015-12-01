@@ -1,0 +1,16 @@
+<template name="questions">
+    <div class="background-container">
+        <div class="padding-container">
+            <div class="questionnaire-container">
+                <div class="questionnaire">
+                    <form class="ac-custom ac-radio ac-fill">
+                        {{#each questions}}
+                            {{> questionItem}}
+                        {{/each}}
+                        <input type="submit" value="Valider">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

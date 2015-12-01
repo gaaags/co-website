@@ -1,6 +1,8 @@
 @import "{wolves:bourbon}/bourbon";
 @import "{wolves:neat}/neat";
 
+//Main page
+
 .container{
   @include outer-container(102%);
   $visual-grid: true;
@@ -72,3 +74,44 @@
     }
   }
 }
+
+//****************************** Blog container ***********************************
+
+.blog {
+  width:80%;
+  margin-right: auto;
+  margin-left: auto;
+
+  &.posts-list{
+    .post {
+      @include row();
+      .post-image {
+        @include span-columns(4)
+      }
+      .post-text {
+        @include span-columns(8)
+      }
+    }
+  }
+
+  &.post-page{
+    .post{
+      .post-image{
+        @include span-columns(12)
+      }
+      .post-text{
+        @include span-columns(12)
+      }
+    }
+  }
+}
+
+//****************************** Questionnaire container *******************************
+
+.questionnaire-container {
+  width:60%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+

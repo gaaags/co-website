@@ -1,0 +1,19 @@
+<template name="questionItem">
+    <div class="question-group">
+        <h3>{{label}}</h3>
+        <ul>
+            <li>
+                <input type="radio" name="{{name}}" id="{{name}}_A" value="A" data-score={{options.A.score}}>
+                <label for="{{name}}_A">{{options.A.value}}</label>
+            </li>
+            <li>
+                <input type="radio" name="{{name}}" id="{{name}}_B" value="B" data-score={{options.B.score}}>
+                <label for="{{name}}_B">{{options.B.value}}</label>
+            </li>
+            <li>
+                <input type="radio" name="{{name}}" id="{{name}}_C" value="C" data-score={{options.C.score}}>
+                <label for="{{name}}_C">{{options.C.value}}</label>
+            </li>
+        </ul>
+    </div><br/>
+</template>

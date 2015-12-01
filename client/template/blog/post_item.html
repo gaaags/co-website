@@ -1,0 +1,21 @@
+<template name="postItem">
+    <div class="post">
+        <a href="{{pathFor 'postPage'}}">
+            <div class="post-image">
+                <img src="{{image.src}}" title="{{image.title}}" alt="{{image.alt}}">
+                <!--Image -->
+            </div>
+            <div class="post-text">
+                <h2>{{title}}</h2>
+                <div class="post-info">
+                    <p>Categorie : {{category}}, Date de Création : {{createdAt}}, Auteur : {{author}}</p>
+                    <!--Auteur, date de création, categorie -->
+                </div>
+                <div class="post-abstract">
+                    {{abstract}}
+                    <!--Extrait de l'article-->
+                </div>
+            </div>
+        </a>
+    </div>
+</template>

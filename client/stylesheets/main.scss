@@ -1,5 +1,4 @@
 @import "{wolves:bourbon}/bourbon";
-@import "{wolves:bitters}/base";
 
 @import "grid/grid";
 @import "elements/header";
@@ -18,7 +17,18 @@ $orange-fonce: #FC8712;
 $dark-green: #488452;
 $jaune-clair:#EEEB25;
 $light-black:#1A1212;
+$grey:#ccc;
 $white-transparent:transparentize(white,0.3);
+
+//****************************************** CLEARING **********************************
+
+a{
+  color: $light-black;
+  text-decoration: none;
+  &:visited {
+    color:$light-black;
+  }
+}
 
 //****************************************** GENERAL ***************************************
 
@@ -37,6 +47,29 @@ body {
 
 .transparent-container{
   background-color: $white-transparent;
+}
+
+.padding-container{
+  padding-top: 100px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.background-container {
+  background-image: url('co-main-background.png');
+  background-size: cover;
+}
+
+.background-slide-container {
+  background-image: url('co-main-background.png');
+  background-size: cover;
+  height:100%;
+}
+
+.questionnaire-container {
+  background-color: rgba(255,255,255,0.95);
+  margin-top: 30px;
+  border:solid 1px lighten($grey,5%);
 }
 
 //-------------Titres et Textes-----------------
@@ -60,7 +93,7 @@ h3 {
 }
 h4 {
   font-size:$font-size;
-  font-weight: 600;
+  font-weight: 800;
   position: relative;
 }
 
@@ -89,7 +122,9 @@ p {
   padding-left: 50px;
 
   p {
-    width:80%;
+    i {
+      width:80%;
+    }
   }
 }
 
@@ -99,8 +134,9 @@ p {
   height:60px;
   background-color: $orange-fonce;
   border-radius: 50px;
+  color:#fff;
 
-  i {
+  a:visited {
     color:#fff;
   }
 }
@@ -114,7 +150,7 @@ p {
 
   i {
     position: relative;
-    top: -0.15em;
+    //top: -0.15em;
   }
 }
 
@@ -167,6 +203,10 @@ p {
     position: absolute;
     bottom: 0px;
     right:0px;
+
+    img{
+      width:29em;
+    }
   }
   .cocoriKro-text {
     color: $dark-green;
@@ -448,5 +488,14 @@ p {
     width: 100%;
     text-align: center;
     background-color: $white-transparent;
+  }
+}
+
+//************************************** Not Found **********************************
+
+.not-found {
+  text-align: center;
+  h2{
+    color: $orange-fonce;
   }
 }
